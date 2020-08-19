@@ -2,13 +2,13 @@ public class Products {     // Khởi tạo lớp sản phẩm với những thu
     private String productId;
     private String productName;
     private String description;
-    private double unitPrice;
+    private int unitPrice;
     private int quantity;
 
     public Products() {}         // Khởi tạo contructer không tham số.
 
     public Products(String productId, String productName,           // Còn đây là contructer có tham số.
-                           String description, double unitPrice,
+                           String description, int unitPrice,
                            int quantity) {
         this.productId = productId;
         this.productName = productName;
@@ -46,7 +46,7 @@ public class Products {     // Khởi tạo lớp sản phẩm với những thu
         return unitPrice;
     }
 
-    public void setUnitPrice(double unitPrice) {
+    public void setUnitPrice(int unitPrice) {
         this.unitPrice = unitPrice;
     }
 
@@ -59,7 +59,7 @@ public class Products {     // Khởi tạo lớp sản phẩm với những thu
     }
 
     // Phương thức thêm sản phẩm;
-    public void addProduct() {
+    public void addProduct(String ID) {
 
     }
 
@@ -71,5 +71,16 @@ public class Products {     // Khởi tạo lớp sản phẩm với những thu
     // Phương thức xóa sản phẩm:
     public void deleteProduct() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Products{" +
+                "productId='" + productId + '\'' +
+                ", productName='" + productName + '\'' +
+                ", description='" + description + '\'' +
+                ", unitPrice=" + unitPrice +
+                ", quantity=" + quantity +
+                '}';
     }
 }
